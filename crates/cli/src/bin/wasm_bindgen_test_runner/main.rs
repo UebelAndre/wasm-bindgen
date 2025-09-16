@@ -21,11 +21,11 @@ use std::path::PathBuf;
 use std::thread;
 use wasm_bindgen_cli_support::Bindgen;
 
-mod deno;
-mod headless;
-mod node;
-mod server;
-mod shell;
+use super::deno;
+use super::headless;
+use super::node;
+use super::server;
+use super::shell;
 
 #[derive(Parser)]
 #[command(name = "wasm-bindgen-test-runner", version, about, long_about = None)]
@@ -107,7 +107,7 @@ struct Test {
     ignored: bool,
 }
 
-fn main() -> anyhow::Result<()> {
+pub fn main() -> anyhow::Result<()> {
     env_logger::init();
 
     let cli = Cli::parse();

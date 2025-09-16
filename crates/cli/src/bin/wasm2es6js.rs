@@ -31,7 +31,7 @@ struct Args {
     input: PathBuf,
 }
 
-fn main() -> anyhow::Result<()> {
+pub fn main() -> anyhow::Result<()> {
     let args = Args::parse();
     let wasm = fs::read(&args.input)
         .with_context(|| format!("failed to read `{}`", args.input.display()))?;

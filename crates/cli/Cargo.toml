@@ -16,6 +16,18 @@ repository = "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/cl
 rust-version = "1.82"
 version = "0.2.102"
 
+[[bin]]
+name = "wasm-bindgen"
+path = "src/bin/wasm_bindgen.rs"
+
+[[bin]]
+name = "wasm-bindgen-test-runner"
+path = "src/bin/wasm_bindgen_test_runner/main.rs"
+
+[[bin]]
+name = "wasm2es6js"
+path = "src/bin/wasm2es6js.rs"
+
 [package.metadata.binstall]
 bin-dir = "wasm-bindgen-{ version }-{ target }/{ bin }{ binary-ext }"
 pkg-url = "https://github.com/wasm-bindgen/wasm-bindgen/releases/download/{ version }/wasm-bindgen-{ version }-{ target }{ archive-suffix }"
